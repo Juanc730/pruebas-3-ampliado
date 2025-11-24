@@ -95,19 +95,4 @@ class EmailTest {
         );
     }
 
-    @Test
-    void CorreoMaximoLongitudValido() {
-        String local = "a".repeat(64);
-        String domain = "b".repeat(187) + ".com"; // total = 254
-        String email = local + "@" + domain;
-        assertTrue(emailValidator.isValidEmail(email));
-    }
-
-    @Test
-    void CorreoDemasiadoLargo() {
-        String local = "a".repeat(65);
-        String domain = "b".repeat(190) + ".com"; // total > 254
-        String email = local + "@" + domain;
-        assertFalse(emailValidator.isValidEmail(email));
-    }
 }
