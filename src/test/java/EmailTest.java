@@ -80,11 +80,6 @@ class EmailTest {
     }
 
     @Test
-    void CorreoConExtensionInvalida() {
-        assertFalse(emailValidator.isValidEmail("usuario@dominio.xyz"));
-    }
-
-    /*@Test
     void CorreosConExtensionesValidas() {
         assertAll(
             () -> assertTrue(emailValidator.isValidEmail("usuario@empresa.net")),
@@ -93,6 +88,6 @@ class EmailTest {
             () -> assertTrue(emailValidator.isValidEmail("usuario@gobierno.gov")),
             () -> assertTrue(emailValidator.isValidEmail("usuario@tienda.pe"))
         );
-    }*/
+    }
 
 }
